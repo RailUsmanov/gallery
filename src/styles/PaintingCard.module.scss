@@ -1,0 +1,97 @@
+.paintingCard {
+  height: 300px;
+  position: relative;
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    width: 280px;
+  }
+
+  @media (min-width: 1440px) {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  img {
+    width: 392px;
+    height: 260px;
+    object-fit: cover;
+
+    @media (min-width: 320px) and (max-width: 767px) {
+      width: 270px;
+      height: 185px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      width: 350px;
+      height: 220px;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1439px) {
+      width: 392px;
+      margin: 20px;
+    }
+  }
+
+  .artist {
+    font-size: 14px;
+    margin: 0 12px 12px;
+  }
+
+  .description {
+    font-size: 14px;
+    margin: 0 12px 12px;
+  }
+
+  .paintingInfo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 85%;
+    padding: 10px;
+    color: #333;
+    @media (min-width: 320px) and (max-width: 767px) {
+      top: 120px
+    }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      bottom: 50px;
+      width: 90%;
+    }
+
+
+    @media (min-width: 320px) and (max-width: 1023px) {
+      bottom: 50px;
+      background-image: url("../img/backPaintingImg.svg");
+      background-origin: content-box;
+      background-repeat: no-repeat;
+      background-position: 100% 0;
+      width: 80%;
+    }
+
+    &.darkTheme {
+      background-color: #121212;
+      color: #fff;
+    }
+
+    &.lightTheme {
+      background-color: white;
+      color: #333;
+    }
+
+    div {
+      margin: 10px;
+      padding-left: 10px;
+      border-left: 5px solid #9b4b4b;
+
+      h3 {
+        font-size: 16px;
+        font-family: Cormorant SC;
+      }
+
+      p {
+        font-family: Inter;
+        color: #9b4b4b;
+        font-size: 16px;
+      }
+    }
+  }
+}

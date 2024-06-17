@@ -1,0 +1,38 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  &.dark {
+    color: white;
+  }
+
+  .pageList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 5px;
+    cursor: default;
+    font-size: 16px;
+
+    &:hover:not(.active, .disabled, .next, .prev) {
+      text-decoration: underline;
+    }
+
+    &.active {
+      color: #000;
+      background-color: #dedede;
+    }
+
+    &.disabled {
+      cursor: not-allowed;
+      color: #ccc;
+    }
+
+    &.prev,
+    &.next {
+      &:hover:not(.disabled) {
+        background-color: #dedede;
+      }
+    }
+  }
+}

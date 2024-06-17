@@ -1,0 +1,60 @@
+.gallery {
+  padding: 20px;
+
+  .paintingList {
+    display: grid;
+    grid-gap: 10px;
+    width: 392px;
+
+    @media (min-width: 320px) and (max-width: 767px) {
+      grid-template-columns: 1fr;
+      margin: 5px;
+      padding: 5px;
+      width: 280px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1024px) and (max-width: 1439px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: 1440px) and (max-width: 1920px) {
+      grid-template-columns: repeat(3, 1fr);
+
+      .paintingItem {
+        max-width: 392px;
+      }
+    }
+
+    @media (min-width: 1920px) {
+      grid-template-columns: repeat(3, 1fr);
+
+      .paintingItem {
+        max-width: none;
+      }
+    }
+  }
+
+  .searchBar {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 16px;
+
+    @media (min-width: 320px) and (max-width: 767px) {
+      justify-content: normal;
+    }
+
+    > div {
+      margin: 0 10px;
+      padding: 5px;
+    }
+  }
+
+  .paintingList__searchUnsuccess {
+    width: 320px;
+  }
+}

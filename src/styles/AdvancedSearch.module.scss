@@ -1,0 +1,148 @@
+.advancedSearch {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: white;
+  height: 896px;
+  width: 500px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  margin-bottom: 24px;
+  z-index: 10;
+  padding: 20px;
+
+  &.darkTheme {
+    background-color: #121212;
+    color: white;
+  }
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    width: 220px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    width: 362px;
+  }
+
+  form {
+    padding-left: 40px;
+    @media (min-width: 320px) and (max-width: 767px) {
+      width: 200px;
+    }
+  }
+
+  .closeSearch {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 20px;
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  .filterGroup {
+    grid-row: 2 / 3;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 26px;
+
+    .filterLabel {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      cursor: pointer;
+      width: 320px;
+      height: 36px;
+
+      @media (min-width: 320px) and (max-width: 767px) {
+        width: 200px;
+      }
+    }
+
+    .filterSelect,
+    .dateRangeInput {
+      padding: 8px 12px;
+      font-size: 14px;
+      width: 320px;
+      height: 36px;
+
+      &.darkTheme {
+        background-color: #333333;
+        color: #fff;
+      }
+
+      @media (min-width: 320px) and (max-width: 767px) {
+        width: 200px;
+      }
+    }
+
+    .dateRangeInput {
+      display: flex;
+      align-items: center;
+
+      &.darkTheme {
+        background-color: #121212;
+      }
+
+      .filterInput {
+        width: 67px;
+        margin-right: 8px;
+        height: 26px;
+
+        &.darkTheme {
+          background-color: #333333;
+          color: #fff;
+          border: 1px solid;
+        }
+      }
+
+      .dateRangeSeparator {
+        margin: 0 8px;
+
+        &.darkTheme {
+          background-color: #333333;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .buttonDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 15px;
+
+    .buttonDivSearch,
+    .buttonDivReset {
+      position: absolute;
+      top: 70%;
+      border: none;
+      text-decoration: underline;
+      background-color: transparent;
+      cursor: pointer;
+      margin: 0 10px;
+
+      &:hover {
+        color: black;
+      }
+    }
+
+    .buttonDivSearch {
+      left: 60px;
+      color: black;
+
+      &.darkTheme {
+        color: white;
+      }
+    }
+
+    .buttonDivReset {
+      right: 170px;
+      color: #333333;
+    }
+  }
+}
