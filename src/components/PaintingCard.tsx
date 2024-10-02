@@ -12,7 +12,7 @@ const PaintingCard: React.FC<PaintingCardProps> = ({painting}) => {
     const themeDark = useSelector((state: RootStateType) => state.theme.themeDark)
     return (
         <div className={styles.paintingCard}>
-            <img src={`https://test-front.framework.team${painting.imageUrl}`} alt={painting.name}/>
+            <img src={"https://test-front.framework.team" + painting.imageUrl} alt={painting.name}/>
             <div
                 className={`${styles.paintingInfo} ${themeDark ? styles.darkTheme : styles.lightTheme}`}
             >
